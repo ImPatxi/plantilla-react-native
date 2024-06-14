@@ -1,79 +1,50 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Plantilla App
 
-# Getting Started
+Este documento proporciona una descripción general de la estructura de carpetas y archivos del proyecto Plantilla, diseñado con React Native. Este README tiene como objetivo facilitar a los desarrolladores la comprensión y el manejo de la estructura del proyecto para el desarrollo y mantenimiento efectivos de la aplicación.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Estructura del Proyecto
 
-## Step 1: Start the Metro Server
+A continuación se detalla la organización del directorio del proyecto:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
-
-```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+plantilla/
+│
+├── src/                           # Código fuente de la aplicación
+│   ├── components/                # Componentes reutilizables en varias vistas
+│   │   └── .gitkeep               # Mantiene la carpeta en el repositorio aunque esté vacía
+│   ├── navigation/                # Configuración de la navegación para la app
+│   │   └── .gitkeep               # Mantiene la carpeta en el repositorio aunque esté vacía
+│   ├── views/                     # Contiene todas las vistas específicas del proyecto
+│   │   ├── Auth/                  # Pantallas de autenticación
+│   │   │   ├── Login.js           # Pantalla de login
+│   │   │   ├── Register.js        # Pantalla de registro
+│   │   │   └── ForgotPassword.js  # Pantalla para recuperar contraseña
+│   │   ├── App/                   # Pantallas principales de la app
+│   │   │   ├── Home.js            # Pantalla principal
+│   │   │   ├── SOS.js             # Pantalla de emergencia SOS
+│   │   │   ├── Cameras.js         # Pantalla de cámaras de seguridad
+│   │   │   └── Locks.js           # Pantalla de control de cerraduras
+│   │   └── Drawer/                # Vistas accesibles desde el menú lateral (drawer)
+│   │       ├── Profile.js         # Pantalla de perfil de usuario
+│   │       ├── SharedUsers.js     # Pantalla para usuarios compartidos
+│   │       ├── VirtualKeyboards.js# Pantalla de teclados virtuales
+│   │       ├── Events.js          # Pantalla de eventos
+│   │       ├── Help.js            # Pantalla de ayuda
+│   │       └── Logout.js          # Función para cerrar sesión
+│   ├── utils/                     # Herramientas y utilidades generales
+│   │   └── .gitkeep               # Mantiene la carpeta en el repositorio aunque esté vacía
+│   ├── resources/                 # Recursos estáticos como imágenes y fuentes
+│   │   └── .gitkeep               # Mantiene la carpeta en el repositorio aunque esté vacía
+│   ├── store/                     # Gestión de estado Redux (si se utiliza)
+│   │   ├── reducers/              # Reducers de Redux
+│   │   │   └── index.js           # Combinador de todos los reducers
+│   │   ├── actions/               # Acciones de Redux
+│   │   │   └── index.js           # Exportación de todas las acciones
+│   ├── constants/                 # Constantes usadas en la app
+│   │   ├── Colors.js              # Definiciones de colores
+│   │   └── Strings.js             # Cadenas de texto centralizadas
+│
+├── android/                       # Código específico de Android
+├── ios/                           # Código específico de iOS
+├── node_modules/                  # Módulos de Node.js
+├── index.js                       # Punto de entrada de la aplicación
+└── App.js                         # Componente raíz de la aplicación
