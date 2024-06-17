@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import {View, Text } from 'react-native';
+import { containerStyles } from '../../styles/containerStyles';
+import { titlesStyles } from '../../styles/titlesStyles';
 
 const Events = () => {
     return (
-        <View>
-            <Text>¡Hola desde la vista de eventos!</Text>
+        <View style={containerStyles.container}>
+            <Text style={titlesStyles.title}>Vista de Eventos</Text>
         </View>
     );
 };

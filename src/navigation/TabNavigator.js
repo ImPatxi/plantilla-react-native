@@ -6,29 +6,31 @@ import SOS from '../views/App/SOS';
 import Cameras from '../views/App/Cameras';
 import Locks from '../views/App/Locks';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Colors from '../constants/Colors';
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
-  const { colors } = useTheme();
 
   return (
     <Tab.Navigator
       screenOptions={{
-        headerStyle: { backgroundColor: colors.surface },
-        headerTintColor: colors.text,
-        tabBarStyle: { backgroundColor: colors.surface },
-        tabBarActiveTintColor: colors.primary,
-        tabBarInactiveTintColor: colors.text,
+        headerStyle: { backgroundColor: Colors.surface },
+        headerTintColor: Colors.text,
+        tabBarStyle: { backgroundColor: Colors.surface },
+        tabBarActiveTintColor: Colors.primary,
+        tabBarInactiveTintColor: Colors.text,
         headerShown: false,
+        tabBarIconStyle: { size: 30 },
+        tabBarLabelStyle: { fontSize: 12 }
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="Inicio"
         component={Home}
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" color={color} size={30} />
           ),
         }}
       />
@@ -36,26 +38,26 @@ const TabNavigator = () => {
         name="SOS"
         component={SOS}
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="alarm" color={color} size={size} />
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="alarm" color={color} size={30} />
           ),
         }}
       />
       <Tab.Screen
-        name="Cameras"
+        name="Cámaras"
         component={Cameras}
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="camera" color={color} size={size} />
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="camera" color={color} size={30} />
           ),
         }}
       />
       <Tab.Screen
-        name="Locks"
+        name="Cerraduras"
         component={Locks}
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="lock" color={color} size={size} />
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="lock" color={color} size={30} />
           ),
         }}
       />

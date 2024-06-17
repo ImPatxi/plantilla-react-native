@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import CustomButton from '../../components/CustomButton';
 import EmailInput from '../../components/EmailInput';
 import PasswordInput from '../../components/PasswordInput';
@@ -28,7 +28,10 @@ const Login = () => {
       <PasswordInput value={password} onChangeText={setPassword} />
       <CustomButton title={strings.login.loginButton} onPress={handleLogin} />
       <CustomButton title={strings.login.registerButton} onPress={() => navigation.navigate('Register')} />
-      <CustomButton title={strings.login.forgotPassword} onPress={() => navigation.navigate('ForgotPassword')} />
+        <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
+          <Text style={titlesStyles.linkButton}>{strings.login.forgotPassword}</Text>
+        </TouchableOpacity>
+
     </View>
   );
 };

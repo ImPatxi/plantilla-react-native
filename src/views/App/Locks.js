@@ -1,24 +1,13 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
+import { containerStyles } from '../../styles/containerStyles';
+import { titlesStyles } from '../../styles/titlesStyles';
 
 const Locks = () => {
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Locks View</Text>
+        <View style={containerStyles.container}>
+            <Text style={titlesStyles.title}>Vista de Cerraduras</Text>
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    text: {
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-});
-
 export default Locks;

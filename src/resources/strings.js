@@ -1,13 +1,22 @@
 const strings = {
     login: {
       loginTitle: "Iniciar sesión",
-      registerTitle: "Registrarse",
       username: "Correo electrónico",
       password: "Contraseña",
       loginButton: "Iniciar sesión",
       forgotPassword: "¿Olvidaste tu contraseña?",
       registerButton: "Registrarse",
-      forgotPasswordButton: "Restablecer contraseña",
+    },
+    register: {
+      registerTitle: "Registrarse",
+      username: "Correo electrónico",
+      password: "Contraseña",
+      registerButton: "Registrarse",
+    },
+    forgotPassword: {
+      forgotPasswordTitle: "Restablecer contraseña",
+      username: "Correo electrónico",
+      resetPasswordButton: "Restablecer contraseña",
     },
     home: {
       logoutButton: "Cerrar sesión",
@@ -26,6 +35,9 @@ const strings = {
       goBack: "Atrás",
       goForward: "Adelante",
     },
+    app: {
+      name: "plantilla",
+    }
   };
   
   export default strings;

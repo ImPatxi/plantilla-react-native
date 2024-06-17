@@ -20,10 +20,10 @@ const Register = () => {
 
   return (
     <View style={containerStyles.paddingContainer20}>
-      <Text style={titlesStyles.title}>{strings.login.registerTitle}</Text>
+      <Text style={titlesStyles.title}>{strings.register.registerTitle}</Text>
       <EmailInput value={email} onChangeText={setEmail} />
       <PasswordInput value={password} onChangeText={setPassword} />
-      <CustomButton title={strings.login.registerButton} onPress={handleRegister} />
+      <CustomButton title={strings.register.registerButton} onPress={handleRegister} />
       <CustomButton title={strings.navigation.goBack} onPress={() => navigation.goBack()} />
       
     </View>

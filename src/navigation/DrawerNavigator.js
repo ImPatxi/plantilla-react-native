@@ -8,6 +8,7 @@ import Help from '../views/Drawer/Help';
 import Logout from '../views/Drawer/Logout';
 import CustomHeader from '../components/CustomHeader';
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
+import DrawerHeader from './navigationComponents/DrawerHeader';
 
 const Drawer = createDrawerNavigator();
 
@@ -15,6 +16,7 @@ const CustomDrawerContent = (props) => {
   const { colors } = useTheme();
   return (
     <DrawerContentScrollView {...props} style={{ backgroundColor: colors.background }}>
+      <DrawerHeader />
       <DrawerItemList {...props} />
     </DrawerContentScrollView>
   );
@@ -25,18 +27,18 @@ const DrawerNavigator = () => {
 
   return (
     <Drawer.Navigator
-      initialRouteName="Main"
+      initialRouteName="Principal"
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{
         header: () => <CustomHeader />,
         drawerStyle: { backgroundColor: colors.background },
       }}
     >
-      <Drawer.Screen name="Main" component={TabNavigator} />
-      <Drawer.Screen name="Profile" component={Profile} />
-      <Drawer.Screen name="Events" component={Events} />
-      <Drawer.Screen name="Help" component={Help} />
-      <Drawer.Screen name="Logout" component={Logout} />
+      <Drawer.Screen name="Principal" component={TabNavigator} />
+      <Drawer.Screen name="Perfil" component={Profile} />
+      <Drawer.Screen name="Eventos" component={Events} />
+      <Drawer.Screen name="Ayuda" component={Help} />
+      <Drawer.Screen name="Cerrar Sesión" component={Logout} />
     </Drawer.Navigator>
   );
 };

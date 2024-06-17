@@ -1,12 +1,20 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { useEffect } from 'react';
+import { View, Text, Button } from 'react-native';
+import useStore from '../../store/useStore'; 
 
 const Logout = () => {
+    const logout = useStore(state => state.logout);
+
+    useEffect(() => {
+        logout();
+    }
+    , []);
+
     return (
         <View>
-            <Text>Logout View</Text>
+            <Text>Logging out...</Text>
         </View>
     );
-};
+}
 
 export default Logout;

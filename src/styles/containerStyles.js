@@ -17,4 +17,11 @@ export const containerStyles = StyleSheet.create({
     backgroundColor: Colors.background,
     padding: 20,
   },
+  headerContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Colors.primary,
+    padding: 20,
+  },
 });

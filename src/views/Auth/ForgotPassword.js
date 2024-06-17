@@ -17,10 +17,10 @@ const ForgotPassword = () => {
   };
 
   return (
-    <View style={containerStyles.container}>
-      <Text style={titlesStyles.title}>{strings.login.forgotPassword}</Text>
+    <View style={containerStyles.paddingContainer20}>
+      <Text style={titlesStyles.title}>{strings.forgotPassword.forgotPassword}</Text>
       <EmailInput value={email} onChangeText={setEmail} />
-      <CustomButton title={strings.login.forgotPasswordButton} onPress={handleResetPassword} />
+      <CustomButton title={strings.forgotPassword.resetPasswordButton} onPress={handleResetPassword} />
       <CustomButton title={strings.navigation.goBack} onPress={() => navigation.goBack()} />
     </View>
   );
